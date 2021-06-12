@@ -7,8 +7,8 @@ public class Application {
         Scanner inputs = new Scanner(System.in);
         System.out.println("What is your password?");
         String password = inputs.nextLine();
-        char passwordc[] = password.toCharArray();
-        Password passwordCheck = new Password(password, passwordc);
+        //char passwordc[] = password.toCharArray();
+        Password passwordCheck = new Password(password);
 
         int passStrength;
         passStrength = passwordCheck.passwordResult();

@@ -8,8 +8,8 @@ public class Anagram {
 
     public static String string1;
     public static String string2;
-    private static char str1[];
-    private static char str2[];
+    public static char str1[];
+    public static char str2[];
 
     Anagram(){
 
@@ -25,10 +25,9 @@ public class Anagram {
 
     void checkAnagram()
     {
-        str1 = string1.toCharArray();
-        str2 = string2.toCharArray();
 
-        if (isAnagram(str1, str2))
+
+        if (isAnagram(string1, string2))
             System.out.println("The two strings are"
                     + " anagram of each other");
         else
@@ -38,8 +37,10 @@ public class Anagram {
     }
 
 
-    static boolean isAnagram(char[] str1, char[] str2)
+    static boolean isAnagram(String string1, String string2)
     {
+        str1 = string1.toCharArray();
+        str2 = string2.toCharArray();
 
         int n1 = str1.length;
         int n2 = str2.length;

@@ -7,18 +7,18 @@ public class Password {
 
 
     private static String passwordtest;
-    private static char passwordtestc[];
 
 
-    Password(String inputvalues, char inputvaluec[]) {
+
+    Password(String inputvalues) {
          passwordtest = inputvalues;
-         passwordtestc = inputvaluec;
+         //passwordtestc = inputvaluec;
 
     }
 
     public static int passwordResult()
     {
-        int result = passwordValidator(passwordtest, passwordtestc);
+        int result = passwordValidator(passwordtest);
         return result;
 
     }
@@ -26,7 +26,9 @@ public class Password {
 
 
 
-    private static int passwordValidator(String passwordtest, char passwordtestc[]) {
+    public static int passwordValidator(String passwordtest) {
+
+        char passwordtestc[] = passwordtest.toCharArray();
         int d =0;
         int a =0;
         int sa=0;
