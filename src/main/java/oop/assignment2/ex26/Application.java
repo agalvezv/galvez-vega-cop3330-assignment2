@@ -18,8 +18,8 @@ public class Application {
 
         System.out.println("What is the monthly payment you can make?");
         double p = inputs.nextDouble();
-        p = Math.round(b*100);
-        p = b/100;
+        p = Math.round(p*100);
+        p = p/100;
         //months to pay
         PaymentCalculator mtpCheck = new PaymentCalculator(APR, b, p);
 

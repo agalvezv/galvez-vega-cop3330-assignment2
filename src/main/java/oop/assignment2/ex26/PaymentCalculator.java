@@ -17,6 +17,7 @@ public class PaymentCalculator {
         APR = inputAPR;
         b=inputb;
         p=inputp;
+        //System.out.println(p);
 
 
     }
@@ -35,20 +36,31 @@ public class PaymentCalculator {
         //fine here.
 
         i = APR/365;
-        //System.out.print(i);
-        //double minicalc = 1-(1+i);
-        double power = Math.pow((1+i),30);
-        double miniresult = 1 - power;
 
-        double incalc1 = 1 + b/p * miniresult;
-        //System.out.print(incalc1);
-        double incalc2 = 1 + i;
-        //System.out.print(incalc2);
+        double calcpart1 = 1;
+        calcpart1 = calcpart1/30;
+        calcpart1 *= -1;
+        //System.out.print(calcpart1);
+        //part 1 correct
 
-        n = -(1/30) * Math.log(incalc1) / Math.log(incalc2);
-        //System.out.print(n);
+        //System.out.println(b);
+        //System.out.println(p);
+        double miniresult = Math.pow((1+i),30);
+        miniresult = 1 - miniresult;
+        double calcpart2 = 1 + b / p * miniresult;
+        calcpart2 = Math.log10(calcpart2);
+        //System.out.print(calcpart2);
 
-        n = Math.round(n);
+
+
+        double miniresult2= i+1;
+        double calcpart3 = Math.log10(miniresult2);
+       // System.out.println(calcpart3);
+
+        n = calcpart1*calcpart2/calcpart3;
+
+        n = Math.ceil(n);
+        //System.out.println(n);
         nFinal = (int)n;
 
         return nFinal;
