@@ -11,6 +11,16 @@ public class Anagram {
     private static char str1[];
     private static char str2[];
 
+    Anagram(){
+
+    }
+
+    Anagram(String inputstring1, String inputstring2)
+    {
+        string1 = inputstring1;
+        string2 = inputstring2;
+    }
+
 
 
     void checkAnagram()

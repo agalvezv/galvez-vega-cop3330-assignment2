@@ -18,9 +18,9 @@ public class Application {
         System.out.println("Enter a second word.");
         appString2 = inputs.nextLine();
 
-        Anagram anagramCheck = new Anagram();
-        Anagram.string1 = appString1;
-        Anagram.string2 = appString2;
+        Anagram anagramCheck = new Anagram(appString1, appString2);
+        //Anagram.string1 = appString1;
+        //Anagram.string2 = appString2;
         anagramCheck.checkAnagram();
 
 
