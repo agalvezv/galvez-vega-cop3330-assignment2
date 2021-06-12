@@ -28,7 +28,7 @@ public class Anagram {
         str1 = string1.toCharArray();
         str2 = string2.toCharArray();
 
-        if (areAnagram(str1, str2))
+        if (isAnagram(str1, str2))
             System.out.println("The two strings are"
                     + " anagram of each other");
         else
@@ -38,7 +38,7 @@ public class Anagram {
     }
 
 
-    static boolean areAnagram(char[] str1, char[] str2)
+    static boolean isAnagram(char[] str1, char[] str2)
     {
 
         int n1 = str1.length;
