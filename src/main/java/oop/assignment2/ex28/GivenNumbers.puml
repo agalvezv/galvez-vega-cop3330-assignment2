@@ -1,0 +1,12 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+GivenNumber -> myLoop: Inserted
+myLoop -> addedResults: values added
+myLoop <- addedResults: values requested
+
+addedResults -> Output: Final Results
+
+@enduml
