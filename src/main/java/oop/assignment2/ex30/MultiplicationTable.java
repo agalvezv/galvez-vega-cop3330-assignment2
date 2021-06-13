@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Alex Galvez-Vega
+ */
+
 package oop.assignment2.ex30;
 
 public class MultiplicationTable {
